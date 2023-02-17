@@ -1,0 +1,66 @@
+data InnerStruct:
+    arr: []string
+    num: u32
+
+data SomeStruct:
+    str: string
+    num: u64
+    inner: InnerStruct
+
+-- Structures can be created in aqua code
+func createStruct(i: []u32) -> SomeStruct:
+    <- SomeStruct(
+        str = "some str",
+        num = 4,
+        inner = InnerStruct(arr = ["a", "b", "c"], num = i[2])
+    )
+    
+-- To modify a structure value, there's a method called 'copy'. It creates a copy with values of specified fields changed.
+-- Note that copy operates in an immutable way: it does not modify original structure value.
+func changeStr(someStruct: SomeStruct) -> SomeStruct:
+    <- someStruct.copy(str = "new string")
+
+
+service MyService:
+  foo(arg: string) -> bool
+
+-- type of this service is:
+data MyServiceType:
+  foo: string -> bool
+
+
+  -- Define return types as a comma separated list
+func myFunc() -> bool, string:
+  -- Function must return values for all defined types
+  <- true, "successful execution"
+  
+func otherFunc():
+  -- Call a function, don't use returns
+  myFunc()  
+  -- Get any number of results out of the function
+  flag <- myFunc()
+  
+  -- Push results to a stream
+  results: *string
+  is_ok, results <- myFunc()
+  if is_ok:
+    -- We know that it contains successful result
+    foo(results!)
+
+
+-- From where we are, -> relay1 -> peer1
+on "peer1" via "relay1":
+  -- On peer1
+  foo()
+  -- now go -> relay1 -> relay2 -> peer2
+  -- going to relay1 to exit peer1
+  -- going to relay2 to enable access to peer2
+  on "peer2" via "relay2":
+    -- On peer2
+    foo()
+-- This is executed in the root scope, after we were on peer2
+-- How to get there?
+-- Compiler knows the path that just worked
+-- So it goes -> relay2 -> relay1 -> (where we were)
+foo()
+

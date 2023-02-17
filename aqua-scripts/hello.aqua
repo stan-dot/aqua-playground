@@ -1,0 +1,19 @@
+service Hello:
+  say_hello(to_name: string, peer: string)
+
+func bar(callback: string -> ()):
+   callback("Fish")
+
+func foo(peer: string):
+  on peer:
+    -- Capture service resolution
+    Hello "world"
+    -- Create a closure named "closure"
+    closure = (name: string) -> string:
+      -- Use a value that's available on the definition site
+      -- To call a service that's resolved on the definition site
+      Hello.say_hello(name, peer)
+      -- Return a value from the closure; syntax is the same as in functions
+      <- name
+  -- Pass this closure to another function
+  bar(closure)
