@@ -1,0 +1,6 @@
+
+const TRAGET_PEER_ID ?= "this is a target peer id"
+
+-- can be overidden with --const 'TARGET_PEER_ID = "other peer id"'
+
+

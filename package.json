@@ -21,5 +21,15 @@
   "bugs": {
     "url": "https://github.com/stan-dot/aqua-playground/issues"
   },
-  "homepage": "https://github.com/stan-dot/aqua-playground#readme"
+  "homepage": "https://github.com/stan-dot/aqua-playground#readme",
+  "dependencies": {
+    "@fluencelabs/aqua-api": "^0.9.3",
+    "@fluencelabs/aqua-lib": "^0.6.0",
+    "@fluencelabs/fluence": "^0.28.0",
+    "@fluencelabs/fluence-network-environment": "^1.0.14",
+    "@fluencelabs/registry": "^0.8.1"
+  },
+  "devDependencies": {
+    "@fluencelabs/aqua": "^0.10.3"
+  }
 }

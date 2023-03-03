@@ -1,0 +1,8 @@
+module Export
+func foo() ->string:
+  <- "I am Export foo"
+
+
+
+
+

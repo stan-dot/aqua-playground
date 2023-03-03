@@ -1,0 +1,12 @@
+import {createRouteAndRegisterBlocking, resolveRoute} from "@fluencelabs/registry/routing.aqua"
+
+module Export declares foo
+func bar() -> string:
+  <- "I am MyFooBar bar"
+
+func foo()->string:
+  res <- bar()
+  <- res
+
+-- import makes all public ones visible, use only those declared
+export createRouteAndRegisterBlocking, resolveRoute
