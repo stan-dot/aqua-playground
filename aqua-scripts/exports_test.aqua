@@ -1,0 +1,12 @@
+aqua AquaFile declares CONST_NAME, ServiceName, MyType, fn
+
+const CONST_NAME = "something"
+
+service ServiceName:
+  do_something()
+  
+data MyType:
+  result: i32  
+
+func fn() -> string:
+  <- CONST_NAME

@@ -1,0 +1,25 @@
+{
+  "name": "aqua-playground",
+  "version": "1.0.0",
+  "description": "mainly doing the docs from fluence",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "aqua -i aqua-scripts -o compiled-aqua"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stan-dot/aqua-playground.git"
+  },
+  "keywords": [
+    "aqua",
+    "distributed",
+    "systems"
+  ],
+  "author": "stan-dot",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stan-dot/aqua-playground/issues"
+  },
+  "homepage": "https://github.com/stan-dot/aqua-playground#readme"
+}
