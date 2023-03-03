@@ -17,7 +17,8 @@ https://fluence.dev/docs/aqua-book/language/flow/parallel
 build book
 https://fluence.dev/docs/build/introduction
 
-
+need to get fluence faucet
+https://fluence.dev/docs/build/get-started
 
 
 ### will do 
