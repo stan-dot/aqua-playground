@@ -1,23 +1,17 @@
 
-
-
 # all time periods
 ### timeline of done stuff
 
 done bit
 https://fluence.dev/docs/learn/networks
-
 aqua book
-
 https://fluence.dev/docs/aqua-book/language/flow/parallel
 
-
 ### now doing
-
 build book
 https://fluence.dev/docs/build/introduction
 
-need to get fluence faucet
+need to get fluence faucet - with Metamask
 https://fluence.dev/docs/build/get-started
 
 
